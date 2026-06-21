@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>世界杯简明指南 · 访问提醒</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: linear-gradient(145deg, #fde8cd 0%, #fbd7b5 30%, #f6c9a0 70%, #f0b88a 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1.5rem;
+      line-height: 1.6;
+      color: #2e241e;
+    }
+
+    .card {
+      max-width: 800px;
+      width: 100%;
+      background: rgba(255, 249, 242, 0.92);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      border-radius: 40px;
+      padding: 2.8rem 2.8rem 3.2rem;
+      box-shadow: 0 20px 40px -12px rgba(120, 70, 40, 0.25), 0 8px 20px rgba(0,0,0,0.05);
+      transition: box-shadow 0.25s ease;
+    }
+
+    @media (max-width: 600px) {
+      body { padding: 1.2rem; }
+      .card { padding: 2rem 1.5rem 2.2rem; border-radius: 28px; }
+    }
+
+    .hero-title {
+      font-size: 2.6rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 0.3rem;
+      color: #3b2b1f;
+      border-left: 6px solid #d8946a;
+      padding-left: 1.2rem;
+    }
+
+    .subhead {
+      font-size: 1.05rem;
+      color: #6f5542;
+      margin-top: 0.4rem;
+      margin-bottom: 2rem;
+      padding-left: 1.8rem;
+      border-bottom: 1px dashed #e5cdb5;
+      padding-bottom: 0.6rem;
+    }
+
+    .lead {
+      font-size: 1.08rem;
+      font-weight: 420;
+      background: #f7ede4;
+      padding: 1rem 1.4rem;
+      border-radius: 24px;
+      margin-bottom: 2rem;
+      color: #3d2d21;
+    }
+
+    h2 {
+      font-size: 1.45rem;
+      font-weight: 530;
+      margin-top: 2rem;
+      margin-bottom: 0.6rem;
+      color: #4b382a;
+      letter-spacing: -0.01em;
+    }
+
+    p {
+      margin-bottom: 1.1rem;
+    }
+
+    .highlight-link {
+      color: #a45d35;
+      font-weight: 520;
+      text-decoration: none;
+      border-bottom: 2px solid #dbaa83;
+      transition: background 0.2s, color 0.2s;
+      padding: 0 0.1rem;
+    }
+
+    .highlight-link:hover {
+      background: #dbaa83;
+      color: #281e16;
+      border-bottom-color: #a45d35;
+    }
+
+    .insight-box {
+      background: #efe2d4;
+      border-radius: 28px;
+      padding: 1.3rem 1.8rem;
+      margin: 1.8rem 0 1.5rem;
+      font-size: 0.98rem;
+      border-left: 8px solid #b87a54;
+      color: #2f231b;
+    }
+
+    .insight-box strong {
+      color: #673f28;
+    }
+
+    .faq-mini {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin: 2rem 0 1.2rem;
+    }
+
+    .faq-item {
+      background: #f5ede5;
+      padding: 0.9rem 1.4rem;
+      border-radius: 30px;
+      border: 1px solid #e7d4c2;
+    }
+
+    .faq-item .q {
+      font-weight: 550;
+      color: #472f1e;
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+
+    .faq-item .a {
+      color: #4f3c2d;
+      font-size: 0.94rem;
+    }
+
+    .action-note {
+      margin-top: 2.2rem;
+      padding: 1rem 1.6rem 1.2rem;
+      background: #e7d5c0;
+      border-radius: 40px;
+      text-align: center;
+      font-size: 1rem;
+      border: 1px solid #dabb9c;
+    }
+
+    .action-note a {
+      font-weight: 550;
+    }
+
+    .footer-note {
+      margin-top: 2.2rem;
+      font-size: 0.85rem;
+      color: #735d4b;
+      text-align: right;
+      border-top: 1px solid #e5d1bd;
+      padding-top: 1rem;
+    }
+
+    hr {
+      border: none;
+      border-top: 2px dotted #d4b9a2;
+      margin: 1.8rem 0;
+    }
+
+    .button-link {
+      display: inline-block;
+      background: #cb9a78;
+      color: #2c1f17;
+      padding: 0.3rem 1.2rem;
+      border-radius: 60px;
+      text-decoration: none;
+      font-weight: 490;
+      font-size: 0.9rem;
+      border: 1px solid #ba8664;
+      transition: background 0.2s, transform 0.1s;
+      margin: 0 0.2rem;
+    }
+
+    .button-link:hover {
+      background: #dbaa83;
+      transform: scale(1.02);
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="hero-title">世界杯 · 简明现场</div>
+    <div class="subhead">一份聚焦核心、去冗余的访问备忘</div>
+
+    <p class="lead">
+      从赛程焦点到观赛准备，本文提供关于 <a href="https://chinese-worldcup.com" class="highlight-link">世界杯</a> 的精炼指南与实用提醒，帮助你在信息流中快速定位关键节点。
+    </p>
+
+    <h2>赛历中的锚点</h2>
+    <p>
+      每届世界杯都围绕若干高密度比赛日展开。小组赛阶段通常分布三到四个比赛窗口，淘汰赛则逐轮收紧。建议提前标记所在时区的开球时间，尤其关注东道主场次与强强对话——这类比赛往往影响小组出线格局。官方渠道会提前两周释放完整赛程表，可利用日历工具订阅。
+    </p>
+
+    <h2>观赛场景与设备适配</h2>
+    <p>
+      移动端观赛已成为主流，但大屏直播仍提供更完整的战术视野。如果你在通勤或工作间隙关注比分，推荐使用文字直播与实时数据页面；若在家中或聚会场景，则可选择高清信号叠加多角度回放。不同平台延迟差异可能达到 30～60 秒，社交聊球时留意时间差。
+    </p>
+
+    <div class="insight-box">
+      <strong>⚡ 提醒：</strong> 世界杯期间网络流量会激增，尤其是热门比赛上半场结束后。提前检查宽带或移动网络状态，关闭非必要后台应用，能有效减少卡顿。部分直播平台需要注册或登录，建议至少提前一天完成账号准备。
+    </div>
+
+    <h2>内容消费策略</h2>
+    <p>
+      赛前分析、实时讨论、赛后复盘……围绕每场比赛的信息量极大。建议采用“赛前 30 分钟浏览首发+战术简析，中场休息查阅数据面板，终场后阅读 1～2 篇深度评论”的节奏，避免被碎片信息淹没。对于经典比赛，<a href="https://chinese-worldcup.com" class="highlight-link">世界杯</a> 官方档案会长期保留集锦与完整回放，方便日后温习。
+    </p>
+
+    <hr>
+
+    <div class="faq-mini">
+      <div class="faq-item">
+        <span class="q">❓ 在哪获取最准确的积分榜？</span>
+        <span class="a">世界杯官网及授权数据合作方实时更新小组排名、净胜球与相互战绩。第三方聚合平台通常延迟 5～15 分钟。</span>
+      </div>
+      <div class="faq-item">
+        <span class="q">❓ 如何避免错过关键比赛？</span>
+        <span class="a">开启官方 App 的推送通知，或利用手机日历添加赛程（许多体育媒体提供一键导入功能）。</span>
+      </div>
+      <div class="faq-item">
+        <span class="q">❓ 赛后多久可以查看高清集锦？</span>
+        <span class="a">通常比赛结束后 2～4 小时，官方频道会发布 3～5 分钟精华剪辑；完整回放可能需要 12～24 小时。</span>
+      </div>
+    </div>
+
+    <div class="action-note">
+      🏟️ 保持对 <a href="https://chinese-worldcup.com" class="highlight-link">世界杯</a> 动态的清晰感知——收藏官方页面，过滤杂音，专注九十分钟内外的真实瞬间。
+    </div>
+
+    <p style="margin-top: 1.6rem; font-size: 0.94rem; color: #5d4a3a;">
+      如果你是初次深度关注一届世界杯，建议从小组赛第二轮开始跟起：此时各队战术倾向已经明朗，比赛质量往往更高。不必试图看遍所有场次，精选每日 1～2 场重点对决，体验会更专注。
+    </p>
+
+    <div class="footer-note">
+      <span style="background: #dcc7b3; padding: 0.1rem 0.6rem; border-radius: 30px; font-size: 0.75rem;">简明指南 v1</span> · 信息更新至近期赛事周期
+    </div>
+  </div>
+</body>
+</html>
