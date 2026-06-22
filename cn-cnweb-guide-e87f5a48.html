@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>问鼎娱乐 · 稳定入口说明页</title>
+    <style>
+        /* ---------- 基础重置 & 排版 ---------- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans SC", "Helvetica Neue", sans-serif;
+            background-color: #faf9f5;   /* 米白基调 */
+            color: #2c2c2c;
+            line-height: 1.7;
+            padding: 2rem 1.2rem;
+        }
+        .page {
+            max-width: 880px;
+            margin: 2rem auto;
+            background: #fffffffa;
+            border-radius: 28px;
+            box-shadow: 0 6px 28px rgba(0,0,0,0.04);
+            padding: 2.5rem 2rem 3rem;
+        }
+
+        /* ---------- 标题体系 ---------- */
+        h1 {
+            font-size: 2.4rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.4rem;
+            color: #1f1f1f;
+            line-height: 1.2;
+        }
+        .subhead {
+            font-size: 1.1rem;
+            color: #5f5f5f;
+            border-left: 4px solid #d4b87a;
+            padding-left: 1rem;
+            margin: 0.5rem 0 2rem;
+        }
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 550;
+            margin-top: 2.6rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #ece8e1;
+            padding-bottom: 0.4rem;
+            display: inline-block;
+        }
+        h3 {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin: 1.6rem 0 0.6rem;
+            color: #3a3a3a;
+        }
+
+        /* ---------- 卡片、提示框、引用 ---------- */
+        .hero-card {
+            background: #f6f3ed;
+            border-radius: 24px;
+            padding: 2rem 2rem 2.2rem;
+            margin-bottom: 2.2rem;
+            box-shadow: inset 0 1px 3px rgba(255,255,255,0.7), 0 8px 20px rgba(0,0,0,0.02);
+        }
+        .hero-card p {
+            font-size: 1.1rem;
+            max-width: 680px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.4rem;
+            margin: 1.6rem 0;
+        }
+        .feature-item {
+            background: #fcfbf9;
+            padding: 1.2rem 1.4rem;
+            border-radius: 18px;
+            border: 1px solid #ece5db;
+            transition: all 0.1s ease;
+        }
+        .feature-item strong {
+            display: block;
+            font-weight: 550;
+            color: #2d2d2d;
+            margin-bottom: 0.3rem;
+            font-size: 1.05rem;
+        }
+
+        .inset-box {
+            background: #efece6;
+            border-left: 5px solid #c7b38a;
+            padding: 1.2rem 1.6rem;
+            border-radius: 14px;
+            margin: 1.8rem 0;
+            color: #363636;
+        }
+        .inset-box p {
+            margin: 0;
+        }
+
+        .faq-block {
+            margin: 2rem 0 1.4rem;
+        }
+        .faq-item {
+            padding: 0.9rem 0;
+            border-bottom: 1px dashed #ddd6cb;
+        }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-q {
+            font-weight: 550;
+            color: #1f2a32;
+            margin-bottom: 0.2rem;
+            display: flex;
+            gap: 0.4rem;
+        }
+        .faq-q::before {
+            content: "Q.";
+            font-weight: 500;
+            color: #a38b60;
+        }
+        .faq-a {
+            padding-left: 1.6rem;
+            color: #4a4a4a;
+        }
+
+        .foot-note {
+            margin-top: 2.8rem;
+            padding-top: 1.6rem;
+            border-top: 1px solid #e3ddd3;
+            font-size: 0.95rem;
+            color: #5f5f5f;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .foot-note a {
+            color: #3f3f3f;
+            text-decoration: none;
+            border-bottom: 1px dotted #b8aa94;
+        }
+        .foot-note a:hover {
+            color: #000;
+            border-bottom: 1px solid #7d6b4e;
+        }
+
+        /* ---------- 链接 ---------- */
+        a {
+            color: #1f3a4b;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border 0.1s;
+        }
+        a:hover {
+            border-bottom: 1px solid #8c7a5f;
+        }
+        .inline-link {
+            color: #2d4c3e;
+            font-weight: 450;
+        }
+
+        /* ---------- 辅助 ---------- */
+        .tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin: 1rem 0 1.8rem;
+        }
+        .tag {
+            background: #ece8e0;
+            padding: 0.2rem 1rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            color: #3d3d3d;
+        }
+
+        @media (max-width: 600px) {
+            .page { padding: 1.8rem 1rem; }
+            h1 { font-size: 1.9rem; }
+            .feature-grid { grid-template-columns: 1fr; }
+            .hero-card { padding: 1.4rem; }
+            .foot-note { flex-direction: column; gap: 1rem; align-items: flex-start; }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- hero 区域 -->
+    <div class="hero-card">
+        <h1>问鼎娱乐 · 稳定入口</h1>
+        <div class="subhead">一个认真整理的说明页 · 从页面结构到使用场景</div>
+        <p>在访问任何线上服务时，一个清晰、可靠的入口往往是体验的基础。本页围绕 <a href="https://cn-cnweb-wending.com" class="inline-link">问鼎娱乐</a> 整理了几项基本说明与常见问题，帮助你在使用前获得更完整的了解。</p>
+    </div>
+
+    <!-- 优势区 / 特点说明 -->
+    <h2>▎核心特点</h2>
+    <div class="feature-grid">
+        <div class="feature-item">
+            <strong>页面结构清晰</strong>
+            从内容分区到浏览顺序都经过整理，减少寻找信息的成本。
+        </div>
+        <div class="feature-item">
+            <strong>访问路径稳定</strong>
+            通过固定入口进入，避免因链接变动造成的中断。
+        </div>
+        <div class="feature-item">
+            <strong>说明与提示并重</strong>
+            每部分附带上下文解释，方便新接触的用户快速定位。
+        </div>
+        <div class="feature-item">
+            <strong>设备适配</strong>
+            在桌面及移动端均保持良好的阅读与操作体验。
+        </div>
+    </div>
+
+    <!-- 说明区 / 场景与使用 -->
+    <h2>▎适用场景与说明</h2>
+    <p>本说明页适用于以下常见使用情境：</p>
+    <ul style="margin-left: 1.6rem; padding-left: 0.4rem; list-style: disc; color: #3d3d3d;">
+        <li>首次了解 <a href="https://cn-cnweb-wending.com">问鼎娱乐</a> 时，希望先获取一份客观的功能概览；</li>
+        <li>日常访问中遇到入口变化，需要一个稳定的参考点；</li>
+        <li>需要将平台信息分享给他人，并附带一段平实的介绍；</li>
+        <li>对页面布局、内容组织方式有基本预期，以便更快上手。</li>
+    </ul>
+
+    <div class="inset-box">
+        <p><strong>📌 提示：</strong> 页面中所有链接均指向同一稳定地址，你可以直接将其收藏或用于导航。如果遇到内容调整，此页会保持基础结构与说明的一致性。</p>
+    </div>
+
+    <h3>关于访问与页面节奏</h3>
+    <p>每个区块之间留有合理的视觉间隔，重点内容使用卡片或色块区分。你从顶部向下浏览时，会依次经过介绍、特点、场景、常见疑问和底部链接，不需要频繁返回或跳转。</p>
+
+    <!-- FAQ 摘要区 -->
+    <h2>▎常见疑问摘要</h2>
+    <div class="faq-block">
+        <div class="faq-item">
+            <div class="faq-q">这个页面与主站是什么关系？</div>
+            <div class="faq-a">它是针对 <a href="https://cn-cnweb-wending.com">问鼎娱乐</a> 整理的内容说明页，帮助用户在访问前获得结构化的信息，不替代主站功能。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">页面内容会频繁变化吗？</div>
+            <div class="faq-a">核心结构与说明会保持稳定，仅可能在信息细节或排版上做适应性调整，每次变化都会保留清晰的阅读节奏。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">如何确认当前是最新版本？</div>
+            <div class="faq-a">你可以通过页脚链接或直接访问主站确认。本页每次更新都会保持内容完整且不依赖外部资源。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">为什么使用米白背景和卡片布局？</div>
+            <div class="faq-a">米白底色能减轻长时间阅读的视觉疲劳，卡片与色块帮助信息分区，让浏览体验更接近纸质排版。</div>
+        </div>
+    </div>
+
+    <!-- 底部链接与信息 -->
+    <div class="foot-note">
+        <span>© 说明页 · 内容整理参考自公开信息</span>
+        <span>
+            <a href="https://cn-cnweb-wending.com">问鼎娱乐</a>
+            &nbsp;·&nbsp;
+            <span style="color:#a9a08f;">稳定入口</span>
+        </span>
+    </div>
+
+</div>
+</body>
+</html>
